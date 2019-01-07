@@ -14,7 +14,9 @@ class TodosController extends Controller
      */
     public function index()
     {
-        //
+        $todos = Todo::all();
+    
+        return view('todos.index', ['todos' => $todos]);
     }
 
     /**
@@ -24,7 +26,7 @@ class TodosController extends Controller
      */
     public function create()
     {
-        //
+        return view('todos.create');
     }
 
     /**
@@ -35,7 +37,14 @@ class TodosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:15',
+          ]);
+
+        Todo::create($validatedData);
+
+        return redirect()->route('todos.index');
+
     }
 
     /**
