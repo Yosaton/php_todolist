@@ -12,9 +12,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
-      @yield('master')
-    </div>
+    
+      @include('partials._nav')
+
+      <div id="app">
+        <div class="container-fluid">
+          @yield('master')
+        </div>
+      </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
