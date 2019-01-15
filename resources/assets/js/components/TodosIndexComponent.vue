@@ -10,13 +10,13 @@
                   <input type="text" class="form-control" placeholder="Title"
                   v-model="todo.title">
               </div>
-              <button type="submit" class="btn btn-light btn-block"> Save </button>
+              <button type="submit" class="btn btn-success btn-block"> Save </button>
             </form>
             <div class="todos-wrapper">
               <ul class="list-group todos-list">
                 <li class="list-group-item todos-list-item" v-for="todo in todos" v-bind:key='todo.id'>
                   <a @click='editTodo(todo)' class="todos-list-item-link">{{ todo.title }}</a>
-                  <button @click="deleteTodo(todo.id)" type="button" class="btn btn-primary btn-sm pull-right">Delete</button>
+                  <button @click="deleteTodo(todo.id)" type="button" class="btn btn-danger btn-md float-right">Delete</button>
                 </li>
               </ul>
             </div>
