@@ -47979,7 +47979,7 @@ var render = function() {
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-light btn-block",
+                    staticClass: "btn btn-success btn-block",
                     attrs: { type: "submit" }
                   },
                   [_vm._v(" Save ")]
@@ -48015,7 +48015,7 @@ var render = function() {
                       _c(
                         "button",
                         {
-                          staticClass: "btn btn-primary btn-sm pull-right",
+                          staticClass: "btn btn-danger btn-md float-right",
                           attrs: { type: "button" },
                           on: {
                             click: function($event) {
